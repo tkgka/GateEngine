@@ -10,6 +10,10 @@ import UIKit
 import AVFoundation
 
 public struct UIKitPlatform: PlatformProtocol, InternalPlatformProtocol {
+    func font(named name: String) -> Font {
+        return Font.default
+    }
+    
     #if GATEENGINE_PLATFORM_HAS_FILESYSTEM
     #if GATEENGINE_PLATFORM_HAS_AsynchronousFileSystem
     public static let fileSystem: some AsynchronousFileSystem = AsynchronousAppleFileSystem()

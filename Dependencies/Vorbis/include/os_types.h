@@ -69,7 +69,7 @@
 #  endif
 
 #elif (defined(__APPLE__) && defined(__MACH__)) /* MacOS X Framework build */
-
+#include <_types/_uint16_t.h>
 #  include <sys/types.h>
    typedef int16_t ogg_int16_t;
    typedef uint16_t ogg_uint16_t;
